@@ -1,5 +1,5 @@
 import { Injectable } from '@nestjs/common';
-import { ExchangeRates } from 'src/interfaces/exchange-rates.interface';
+import { ExchangeRates } from 'src/currency/interfaces/exchange-rates.interface';
 
 @Injectable()
 export class CurrencyService {
@@ -19,14 +19,14 @@ export class CurrencyService {
   }
 
   // Convert currencies
-  async convertCurrencies(value: number, fromCurrency: string, toCurrency: string): Promise<number | undefined> {
+  async convertCurrencies(amount: number, fromCurrency: string, toCurrency: string): Promise<number | undefined> {
     // Get the latest exchange rates as an object
     const exchangeRates: ExchangeRates = await this.getLatestExchangeRates()
 
     if (exchangeRates[fromCurrency] && exchangeRates[toCurrency]) {
       // Get the exchange rate for the two currencies
       const exchangeRate = Number(exchangeRates[toCurrency]) / Number(exchangeRates[fromCurrency])
-      return value * exchangeRate
+      return amount * exchangeRate
     }
   }
 }
