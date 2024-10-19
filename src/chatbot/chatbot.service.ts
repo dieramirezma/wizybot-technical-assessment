@@ -91,7 +91,6 @@ export class ChatbotService {
 
     let functionResponse: string
 
-    console.log(toolCall)
     // Check if the tool call is valid
     if (!toolCall) {
       return response.choices[0].message.content;
