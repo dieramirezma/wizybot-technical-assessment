@@ -1,6 +1,6 @@
 import { Controller, Post, Body, UsePipes, ValidationPipe } from '@nestjs/common';
 import { ChatbotService } from './chatbot.service';
-import { EnquiryDto } from './dto/enquiry.dto';
+import { EnquiryDto } from './dto/chat-message.dto';
 
 @Controller('chatbot')
 export class ChatbotController {

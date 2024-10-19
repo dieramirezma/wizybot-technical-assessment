@@ -4,7 +4,7 @@ import { CurrencyService } from 'src/currency/currency.service';
 import { CsvService } from 'src/csv/csv.service';
 import { Product } from 'src/csv/interfaces/product.interface';
 import OpenAI from 'openai';
-import { EnquiryDto } from './dto/enquiry.dto';
+import { EnquiryDto } from './dto/chat-message.dto';
 import { plainToInstance } from 'class-transformer';
 import { ProductSearchDto } from 'src/csv/dto/product-search.dto';
 import { validate } from 'class-validator';
