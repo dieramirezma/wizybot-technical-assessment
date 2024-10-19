@@ -1,5 +1,5 @@
 import { Injectable } from '@nestjs/common';
-import { Product } from 'src/interfaces/product.interface';
+import { Product } from 'src/csv/interfaces/product.interface';
 import * as fs from 'fs';
 import * as csv from 'csv-parser';
 
