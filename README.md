@@ -48,13 +48,13 @@ $ npm run start
 $ npm run start:dev
 ```
 
-Go to `http:localhost:PORT/api/v1/chat/message` to use the API. Check API documentation at `http:localhost:PORT/docs`.
+Go to `http://localhost:PORT/api/v1/chatbot/message` to use the API. Check API documentation at `http://localhost:PORT/docs`.
 > [!NOTE]  
 > You must change `PORT` for the number port in your `.env` file. The default port is 3000
 
 ## API Endpoints
 - Send a message to the chatbot
-  - Endpoint: `POST api/v1/chat/message`
+  - Endpoint: `POST api/v1/chatbot/message`
   - Request Body: 
     ```json
     {
