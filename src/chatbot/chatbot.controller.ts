@@ -1,6 +1,6 @@
 import { Controller, Post, Body, UsePipes, ValidationPipe } from '@nestjs/common';
 import { ChatbotService } from './chatbot.service';
-import { EnquiryDto } from './dto/chat-message.dto';
+import { ChatMessageDto } from './dto/chat-message.dto';
 
 @Controller('chatbot')
 export class ChatbotController {
@@ -12,7 +12,7 @@ export class ChatbotController {
 
   @Post('message')
   @UsePipes(new ValidationPipe())
-  async handleChatMessage(@Body() enquiry: EnquiryDto) {
+  async handleChatMessage(@Body() enquiry: ChatMessageDto) {
     try {
       const response = await this.chatbotService.openaiChatbotResponse(enquiry);
       return { response };
